@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+section {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#000, #0f0, #000);
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+section span {
+  position: relative;
+  display: block;
+  width: calc(6.25vw - 2px);
+  height: calc(6.25vw - 2px);
+  background: #181818;
+  z-index: 2;
+  transition: 1.5s;
+}
+
+section span:hover {
+  background: #0f0;
+  transition: 0s;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid red;
+  width: fit-content;
+  padding: 10px;
+  /* height: 50vh; */
+  border-radius: 10px;
+  gap: 20px;
+  background-color: lightblue;
+  z-index: 999;
+}
+
+.join {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 12px;
+}
+
+.create-btn {
+  width: 100%;
+}
+
+.message-box {
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  align-items: stretch;
+}
+
+.messages {
+  overflow-y: scroll;
+  flex: 1;
+  width: 100%;
+}
+
+.inputs {
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
+#message {
+  flex: 1;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.muted {
+  position: absolute;
+  font-size: 10px;
+  color: darkgray;
+  width: fit-content;
+  right: 0;
+  margin: 4px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 250px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.field input {
+  outline: none;
+  height: 20px;
+}
+
+.error {
+  list-style-type: none;
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: start;
+  padding: 0;
+}
+
+.text {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.849);
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.msg {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  right: 0;
+  width: fit-content;
+}
+
+.msg strong {
+  font-size: 12px; 
+}
+
+/* Add this to your main CSS file or within a <style> tag in your HTML file */
+.message-box {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.messages {
+  padding: 10px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.message.self {
+  align-self: flex-end;
+  background-color: #dcf8c6; /* WhatsApp light green for sender */
+  text-align: right;
+}
+
+.message.other {
+  align-self: flex-start;
+  background-color: #ffffff; /* WhatsApp white for receiver */
+  text-align: left;
+}
+
+.message .text {
+  font-size: 14px;
+}
+
+.message .time {
+  font-size: 10px;
+  color: #888;
+  margin-top: 5px;
+}
+

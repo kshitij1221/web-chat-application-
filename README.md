@@ -111,15 +111,6 @@ This project reflects my:
 
 I designed this project to be **relevant to modern real-time communication systems**, showcasing my ability to **build and deploy real-world solutions** that align with current industry trends.  
 
-🔍 Demo and Screenshots  
-> You can add demo links and screenshots here once available.
-
- 📧 Contact
-
-
- 📝 License
-
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
  🙌 Acknowledgements  
 
